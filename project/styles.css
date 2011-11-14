@@ -1,0 +1,4 @@
+p { color:red; margin:5px; cursor:pointer; }
+p.hilite { background:yellow; }
+p.Menu { color:blue;}
+p.Menu.hilite { background:green; }

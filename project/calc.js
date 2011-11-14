@@ -1,21 +1,29 @@
-function calculations (crop, numbush, priceper, property, base, acres) {
-  if (crop == null) crop = "corn"
-  if (numbush == null) numbush = 133.7
-  if (priceper == null) priceper  = 5.78
-  if (property == null) property = "Laddonia"
-  if (base == null) base = 128.88  
-  if (acres == null) acres = 232.6
+function calculations (info) {
+  info = info || {}
+  var crop = info.crop 
+    , numbush = info.numbush 
+    , priceper = info.priceper 
+    , property = info.property 
+    , base = info.base 
+    , acres = info.acres 
+
+  if (!crop) crop = "corn"
+  if (!numbush) numbush = 133.7
+  if (!priceper) priceper  = 5.78
+  if (!property) property = "Laddonia"
+  if (!base) base = 128.88
+  if (!acres) acres = 232.6
 
   var resultElem = document.getElementById('result')
-    onethird = (numbush / 3).toFixed(2)
-    incomeacre = (onethird * priceper).toFixed(2)
-    temp = (incomeacre-base).toFixed(2)
-    bonacre = (temp * .5).toFixed(2)
-    totalbase = (base * acres).toFixed(2)
-    Bonus = (bonacre * acres).toFixed(2)
-    totalrent = (Number(Bonus) + Number(totalbase)).toFixed(2)
+    ,  onethird = (numbush / 3).toFixed(2)
+    ,  incomeacre = (Number(onethird) * priceper).toFixed(2)
+    ,  temp = (Number(incomeacre)-Number(base)).toFixed(2)
+    ,  bonacre = (Number(temp) * .5).toFixed(2)
+    ,  totalbase = (Number(base) * Number(acres)).toFixed(2)
+    ,  Bonus = (bonacre * acres).toFixed(2)
+    ,  totalrent = (Number(Bonus) + Number(totalbase)).toFixed(2)
 
-    Bonus2 = (((((numbush / 3) * priceper) - base)*.5)*acres) 
+    Bonus2 = (((((numbush / 3) * priceper) - base)*.5)*acres).toFixed(2)
 
      console.log("Bonus per Acre: "  + bonacre)
    console.log("One Third of yield: " + onethird)

@@ -11,14 +11,3 @@ document.getElementById("Submit").onclick=function() {
 }
     
 
-function example(a, b, c, d, e) {
-  return a + b + c + d + e
-}
-
-function example1(obj) {
-  return obj.a + obj.b + obj.c + obj.d + obj.e
-}
-
-
-example(1,2,3,4,5)
-example1({a: 1, b: 2, c: 3, d: 4, e: 5 })

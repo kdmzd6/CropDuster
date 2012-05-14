@@ -7,7 +7,7 @@ function calculations (info) {
     , base = info.base 
     , acres = info.acres 
 
-  if (!crop) crop = "corn"
+  if (!crop) crop = "Corn"
   if (!numbush) numbush = 133.7
   if (!priceper) priceper  = 5.78
   if (!property) property = "Laddonia"
@@ -22,6 +22,7 @@ function calculations (info) {
     ,  totalbase = (Number(base) * Number(acres)).toFixed(2)
     ,  Bonus = (bonacre * acres).toFixed(2)
     ,  totalrent = (Number(Bonus) + Number(totalbase)).toFixed(2)
+    ,  rentper = (Number(totalrent)/Number(acres)).toFixed(2)
 
     Bonus2 = (((((numbush / 3) * priceper) - base)*.5)*acres).toFixed(2)
 
@@ -41,7 +42,7 @@ function calculations (info) {
    + "  Bonus: " + Bonus + "<br />"
    + "Total Base " + (base * acres).toFixed(2) + "<br />"
    + "Total Rent " + property + ": " + totalrent + " <br />"
-   + "Bonus float:" + Bonus2 + "<br />"
+   + "Rent Per Acre: " + rentper + "<br />"
 
 }
 //calculations()

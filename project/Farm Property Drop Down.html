@@ -1,83 +1,60 @@
-<form action="#">
-  <p>
-    Crop Type:
-    <select id="crop">
-    <option value="">Crop Name</option>
-    <option value="Corn">Corn</option>
-    <option value="Soybeans">Soybeans</option>
-    <option value="Wheat">Wheat</option>
-    </select> 
-    </p>
-    <p>Actual Bushels:
-    <input type = "text" size="10" id="numbush" value=""></p>
+
+<div class="mainpage">
+  <link href = "style.css" rel="stylesheet">
+  <div class="menu">
+    <p class="menu">Menu</p>
+    <a href="Farm Project Main.html">Home</a>
+    <a href="Farm Property Drop Down.html">Crop Input</a>
+    <a href="Expense Input.html">Expenses</a>
+    <a href="Reports.html">Reports</a>
+
+  </div>
+
+  <form action="#">
     <p>
-    <label for="priceper">Price per Bushel: $
-    <input type="text" size="10" id="priceper" value="">
-    </input></p>
-    <p>Insurance Cost: $
-    <input type="text" size="10" id="inscost" value="">
-    </input></p>
-    <p>Insurance Reimbursement: $
-    <input type="text" size="10" id="insback" value="">
-    </input></p>
-    <p>Acres:
-    <input type="text" size="10" id="acres" value="">
-    </input></p>
-    <p>Base:
-    <input type="text" size="10" id="base" value="">
-    </input></p>
-    <p>Choose a property:
-    <select id="property">
-    <option value="">Property</option>
-    <option value="Auxvasse">Auxvasse</option>
-    <option value="Laddonia">Laddonia</option>
-    <option value="Martinsburg">Martinsburg</option>
-    </p>
-    </select>
-    <p>Date Crop Planted:
-    </p>
-    <p>Date Crop Removed:
+      Crop Type:
+      <select id="crop">
+      <option value="">Crop Name</option>
+      <option value="Corn">Corn</option>
+      <option value="Soybeans">Soybeans</option>
+      <option value="Wheat">Wheat</option>
+      </select> 
+      </p>
+      <p>Actual Bushels:
+      <input type = "text" size="10" id="numbush" value=""></p>
+      <p>
+      <label for="priceper">Price per Bushel: $
+      <input type="text" size="10" id="priceper" value="">
+      </input></p>
+      <p>Insurance Cost: $
+      <input type="text" size="10" id="inscost" value="">
+      </input></p>
+      <p>Insurance Reimbursement: $
+      <input type="text" size="10" id="insback" value="">
+      </input></p>
+      <p>Acres:
+      <input type="text" size="10" id="acres" value="">
+      </input></p>
+      <p>Base:
+      <input type="text" size="10" id="base" value="">
+      </input></p>
+      <p>Choose a property:
+      <select id="property">
+      <option value="">Property</option>
+      <option value="Auxvasse">Auxvasse</option>
+      <option value="Laddonia">Laddonia</option>
+      <option value="Martinsburg">Martinsburg</option>
+      </p>
+      </select>
+      <p class="date">Date Crop Planted: </p>
+      <p class="date">Date Crop Removed: </p>
+      <p> <input type="button" id="Submit" value ="Submit">
+      <div id ="result" class="results"></div>
+  </div>    
+
     
-
-  
-    <select id="datemon">
-
-    <option value="">Month</option>
-    <option value="1">January</option>
-    <option value="2">February</option>
-    <option value="3">March</option> 
-    <option value="4">April</option>
-    <option value="5">May</option>
-    <option value="6">June</option>
-    <option value="7">July</option>
-    <option value="8">August</option> 
-    <option value="9">September</option>
-    <option value="10">October</option> 
-    <option value="11">November</option>
-    <option value="12">December</option> 
-    <select id="dateday">
-      <option>Day</option>
-    <select id="dateyear">
-      <option>Year</option>
-
-    </select>   
-
-
-
-
-  </select>
-
-  <p> <input type="button" id="Submit" value ="Submit">
-  <p>
-  <select id="yeartest"></select>
-  </p>
-  <p>
-  <select id="yeartest1"></select>
-  </p>
-
-  <p id="result">hello</p>
-  <script src="calc.js"></script>
-  <script src="subitcropdata.js"></script>
-  <script src="calendar.js"></script>
+    <script src="calc.js"></script>
+    <script src="subitcropdata.js"></script>
+    <script src="calendar.js"></script>
 
   
